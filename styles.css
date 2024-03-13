@@ -1,0 +1,12 @@
+/* //Durante el desarrollo del CSS...
+    Se recomienda una aproximación de diseño tipo:
+        * MobileFirst
+        * Esto porque durante el desarrollo empresarial se acostumbra eso
+        * 2do, porque despues resulta más facil adecuar los elementos
+
+
+*/
+body{
+    margin: 0;
+
+}

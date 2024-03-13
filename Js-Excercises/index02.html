@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora HTML</title>
+    <script src="./index02.js" defer></script>
+    <link rel="stylesheet" href="./tuto_js.css">
+</head>
+<body>
+    <b><h1>Calculadora HTML+JS</h1></b>
+    <input type="text" id="op1" placeholder="Operador 1">
+    <select id="operacion" onchange="calcula()">
+        <option value="sum">+ (suma)</option>
+        <option value="res">- (resta)</option>
+        <option value="mul">x (por)</option>
+        <option value="div">/ (divición)</option>
+    </select>
+    <input type="text" id="op2" placeholder="Operador 1">
+    <button type="button" onclick="calcula()">Calcular Resultado...</button>
+    <p id="Res"></p>
+    <p><h6><b>[NOTA]:</b>Si en cualquiera de esos 2 input,
+        <BR> se ingresa algo que no sean valores númericos,
+            <BR>se convertiran en CERO</h6></p>
+</body>
+</html>

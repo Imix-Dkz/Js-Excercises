@@ -18,50 +18,56 @@
             </nav>
         </div>
     </header>
+
     <section id="hero">
         <h1>Aprende a programar<br>con los mejores</h1>
-        <!-- //[NOTA ]El vídeo menciona que se necesita poner el botón dentro de un FROM,
-            con un action ó no funcionará, pero tambien se puede madar a funcionar con 
+        <!-- //[NOTA ] button:onclick()
+            El vídeo menciona que se necesita poner el botón dentro de un FROM,
+            con un action ó no funcionará, pero tambien se puede madar a funcionar con :
                 "onclick=window.open()"
         -->
         <button onclick="window.open('https://github.com/Imix-Dkz/Js-Excercises')" >APLICÁ YA!</button>
     </section>
+
     <section id="somos-proya">
         <div class="container">
             <div class="img-container"></div>
-            <h2>Somos <span class="color-acento">Dkz-Dev!</span></h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore quo error tenetur fuga consequuntur, autem aliquam? Porro, illum. Nobis neque cumque laudantium explicabo sint amet impedit sequi alias aliquam magnam.</p>
-
-            <section id="nuestros-programas">
-                <div class="container">
-                    <h2>Nuestros Cursos de Programación</h2>
-                    <div class="programas">
-                        <!--//Xq "div, programas"
-                            porque para poder usar las caracteristicas de CSS, 'nth-child', hay que mandar a llamar a los elementos DENTRO de un contenedor/elemento, el cual sólo tiene que tener elementos del mismo tipo...
-
-                            Por ejemplo, no podriamos usar el DIV superior 'container', xq existe un elemento H2, que es distinto a los DIV 'carta'
-                        -->
-
-                        <div class="carta">
-                            <h3>Programador Front-End</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolorum alias iusto fugiat atque nesciunt odit? Dignissimos sequi laboriosam, placeat non molestiae voluptatum minus itaque eligendi mollitia dolorum corporis corrupti.</p>
-                            <button onclick="window.open('https://github.com/Imix-Dkz/Js-Excercises')">+Info</button>
-                        </div>
-                        <div class="carta">
-                            <h3>Programador Front-FullStack</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolorum alias iusto fugiat atque nesciunt odit? Dignissimos sequi laboriosam, placeat non molestiae voluptatum minus itaque eligendi mollitia dolorum corporis corrupti.</p>
-                            <button onclick="window.open('https://github.com/Imix-Dkz/Js-Excercises')">+Info</button>
-                        </div>
-                        <div class="carta">
-                            <h3>Programador Front-Pyton</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolorum alias iusto fugiat atque nesciunt odit? Dignissimos sequi laboriosam, placeat non molestiae voluptatum minus itaque eligendi mollitia dolorum corporis corrupti.</p>
-                            <button onclick="window.open('https://github.com/Imix-Dkz/Js-Excercises')">+Info</button>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <div class="texto">
+                <h2>Somos <span class="color-acento">Dkz-Dev!</span></h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore quo error tenetur fuga consequuntur, autem aliquam? Porro, illum. Nobis neque cumque laudantium explicabo sint amet impedit sequi alias aliquam magnam.</p>
+            </div>
         </div>
     </section>
+
+    <section id="nuestros-programas">
+        <div class="container">
+            <h2>Nuestros Cursos de Programación</h2>
+            <div class="programas">
+                <!--//Xq "div, programas"
+                    porque para poder usar las caracteristicas de CSS, 'nth-child', hay que mandar a llamar a los elementos DENTRO de un contenedor/elemento, el cual sólo tiene que tener elementos del mismo tipo...
+
+                    Por ejemplo, no podriamos usar el DIV superior 'container', xq existe un elemento H2, que es distinto a los DIV 'carta'
+                -->
+
+                <div class="carta">
+                    <h3>Programador Front-End</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolorum alias iusto fugiat atque nesciunt odit? Dignissimos sequi laboriosam, placeat non molestiae voluptatum minus itaque eligendi mollitia dolorum corporis corrupti.</p>
+                    <button onclick="window.open('https://github.com/Imix-Dkz/Js-Excercises')">+Info</button>
+                </div>
+                <div class="carta">
+                    <h3>Programador Front-FullStack</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolorum alias iusto fugiat atque nesciunt odit? Dignissimos sequi laboriosam, placeat non molestiae voluptatum minus itaque eligendi mollitia dolorum corporis corrupti.</p>
+                    <button onclick="window.open('https://github.com/Imix-Dkz/Js-Excercises')">+Info</button>
+                </div>
+                <div class="carta">
+                    <h3>Programador Front-Pyton</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolorum alias iusto fugiat atque nesciunt odit? Dignissimos sequi laboriosam, placeat non molestiae voluptatum minus itaque eligendi mollitia dolorum corporis corrupti.</p>
+                    <button onclick="window.open('https://github.com/Imix-Dkz/Js-Excercises')">+Info</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="caracteristicas">
         <div class="container">
             <ul>
@@ -72,13 +78,15 @@
             </ul>
         </div>
     </section>
+
     <section id="final">
         <h2>Listo para programar?</h2>
         <button onclick="window.open('https://github.com/Imix-Dkz/Js-Excercises')">APLICÁ YA!</button>
     </section>
+
     <footer>
         <div class="container">
-            <p>&copy; Dkz-Dev 2024</p>
+            <p>&copy; Dkz-Dev! 2024</p>
         </div>
     </footer>
 </body>

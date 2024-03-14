@@ -10,6 +10,13 @@
 
 *{ /* //Al usar "*", se indica que se afectan a TODOS los elementos del sitio ... */
     box-sizing: border-box; /*Limita el crecimiento de elementos*/
+    /*[NOTA]:margin:0 ;
+        En ocaciones, es necesario indicar el margen de forma global y luego irlo corrigiendo en los elementos que lo necesiten
+        En otras, se omite y se aplica a los que lo vayan a usar
+
+        Esto para evitar en cada caso usar la menor cantidad de código posible
+    */
+
 }
 
 /* //Para este ejemplo se probará importando fuentes desde :
@@ -145,7 +152,7 @@ button:hover{
 #somos-proya{}
 #somos-proya .container{
     text-align: center;
-    padding: 200px 12px;
+    padding: 100px 12px;
     /*height: 85vh; / *85% de la pantallla*/
 }
 
@@ -213,13 +220,6 @@ button:hover{
     text-align: center;
     background-color: rgb(30, 30, 30);
     color: white;
-    ...
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
-    height: 80vh; /*Hv: Indica que ocupará al menos el 80% de la pantalla...*/
 }
 /*El texto en "h2", Mantendrá su tamaño hasta el 90% del ANCHO*/
 #final h2{ font-size: 9vw; }
@@ -238,5 +238,54 @@ button:hover{
     display: flex;
     justify-content: center;
     align-items: flex-end;
+}
 
+/*[NOTA]: Sección de DESKTOP...
+    Ya que se termino la sección mobile, se procede a definir las reglas de comportamiento en escritorio
+
+    Al usar los "@media" querys, se permite definir comportamientos para distintos tamaños de la pantalla
+*/
+@media (min-width:720px){ 
+    header{
+        position: fixed;
+        width: 100%;
+    }
+    header .container{ 
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 30;
+    }
+    
+    #hero h1{ font-size: 5em; }
+
+    /*"#somos-proya" ...
+        Es una sección que gestiona muchos más cambios para el comportamiento deseado...
+    */
+    #somos-proya .container{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    #somos-proya .texto{
+        width: 50%;
+        max-width: 600px;
+        text-align: initial;
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #somos-proya h2{ margin-top: 0px; }
+    #somos-proya .img-container{
+        background-image: url("media/somos-proya.jpg");
+        background-size: cover;
+        background-position: center center;
+        height: 500px;
+        width: 400px;
+    }
+
+    
 }

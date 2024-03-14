@@ -7,11 +7,8 @@ Con seguimiento del video del canal **deivchoi**, se crea un sitio web simple pe
     + Imagenes se toman directo del GIT-Hub del proyecto [MEDIA](https://github.com/choidavid4/pagina-completa-html-css/tree/master/media)
     + Se arma modelo del sitio desde 2 archivos principales
     + se añaden fuente de "Ubuntu" desde archivo ttf
-    + 
-
-19:13 Estilos Generales de los Elementos
-27:33 Estilizado CSS Mobile
-57:20 Estilizado CSS Escritorio
+    + Se cambian un poco los los colores y tamaños con respecto al ejemplo del vídeo
+    + Se hace uso de "@media" querys para ajustar el comportamiento de los elementos en pantalla, en este caso escritorio
 
 ## +Ejercicios y ejemplos de Javascript
 En la carpeta **Js-Excercises**, se muestran scripts con ejemplos o ejercicios del uso de variables y elementos en JS, muchos de ellos vienen de los ejemplos de los videos del canal **deivchoi**, con sus videos:

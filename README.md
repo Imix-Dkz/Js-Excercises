@@ -5,10 +5,10 @@ Con seguimiento del video del canal **deivchoi**, se crea un sitio web simple pe
 ](https://www.youtube.com/watch?v=8-RC-Q7Wtzc)
 * Puntos relevantes:
     + Imagenes se toman directo del GIT-Hub del proyecto [MEDIA](https://github.com/choidavid4/pagina-completa-html-css/tree/master/media)
+    + Se arma modelo del sitio desde 2 archivos principales
+    + se añaden fuente de "Ubuntu" desde archivo ttf
     + 
-01:58 Preparando el entorno
-03:15 La importancia del diseño
-04:33 Maquetado HTML
+
 19:13 Estilos Generales de los Elementos
 27:33 Estilizado CSS Mobile
 57:20 Estilizado CSS Escritorio

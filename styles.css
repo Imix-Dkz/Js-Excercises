@@ -1,12 +1,242 @@
 /* //Durante el desarrollo del CSS...
     Se recomienda una aproximación de diseño tipo:
-        * MobileFirst
-        * Esto porque durante el desarrollo empresarial se acostumbra eso
+        * MobileFirst, orden de desarrollo de componentes
+        * Esto porque durante el desarrollo empresarial se acostumbra eso para poder presentar un primer avance a los clientes
         * 2do, porque despues resulta más facil adecuar los elementos
-
-
+        * Se van dando estilos especiales a las distintas secciones(#hero, #somos-proya, etc...)
+        * Se añade control de comportamiento de los container, ancho maximo
+        * Se considera tambien el comportamiento del header...
 */
+
+*{ /* //Al usar "*", se indica que se afectan a TODOS los elementos del sitio ... */
+    box-sizing: border-box; /*Limita el crecimiento de elementos*/
+}
+
+/* //Para este ejemplo se probará importando fuentes desde :
+    * https://fonts.google.com/specimen/Ubuntu
+    * Usando el "@import" directo en el CSS
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+    * Ó descargando y añadiendo la fuente al proyecto:
+        https://support.google.com/webdesigner/answer/6163074?hl=en&sjid=4050074121625214531-EU#add-google-fonts
+
+        @font-face {
+            font-family: "My Font Name";
+            src: url("assets/myfontname.ttf") format("truetype");
+        }
+*/
+@font-face {
+    font-family: "Ubuntu";
+    src: url("Ubuntu-Regular.ttf") format("truetype");
+}
+
+/* //Para hacer un scrolling más suave...
+    al momento de desplazarse entre secciones del sitio
+    usar... "scroll-behaivor:smooth"
+*/
+html{ scroll-behavior: smooth; }
 body{
+    font-family: "Ubuntu", sans-serif;
+    /* font-weight: 300;
+    font-style: normal; */
     margin: 0;
+}
+
+h1{ font-size: 3.2em; } /*Prev 3.5em*/
+h2{ font-size: 2.4em; } /*Prev 2.7em*/
+h3{ font-size: 1.8em; } /*Prev 2em*/
+p{ font-size: 1.15em; } /*Prev 1.25em*/
+ul{ list-style: none; }
+li{ font-size: 1.11em; } /*1.25em*/
+
+button{
+    font-size: 1.2em; /*1.5em*/
+    font-weight: bold;
+    padding: 12px, 24px;
+    /* //If "padding" has 4 values...
+        padding: 10px 20px 75px 100px;
+            top padding is 10px
+            right padding is 20px
+            bottom padding is 75px
+            left padding is 100px
+    */
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    /* // box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit;
+    */
+    color: white;
+    background-color: chocolate;
+}
+button:hover{
+    background-color: rgb(160, 80, 23);
+}
+
+/*Como la clase "container"...
+    Se usó mucho durante el proceso de maquetado se espera que el sitio cobre mucha mejoria si se tienen cuidado de diseñarla de forma correcta...
+*/
+.container{
+    max-width: 88%; /*1400px*/
+    margin: auto;
+}
+/*Durante el desarrollo, el color original del proyecto era "blueviolet"*/
+.color-acento{ color:chocolate; }
+
+/*HEADER*/
+    header{ background-color: rgb(245, 245, 245); }
+    header .logo{
+        /*[Nota]: "ELEMENTO Hijo"
+            Cuando se indica en CSS un elemento, en este caso "header" y su hijo "logo"( puede ser una 'class'='.nombreClase' ó puede ser un elemento dentro del elemento indicado, Ej. 'header'>'div')
+        */
+        margin: 0;
+        padding: 25px 30px;
+        font-weight: bold;
+        color: chocolate;
+        font-size: 2.2em;
+    }
+    header .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    header nav{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 5px;
+    }
+    header a{
+        padding: 5px 12px;
+        text-decoration: none;
+        font-weight: bold;
+        color: black;
+    }
+    header a:hover{ color: chocolate;}
+
+#hero{ /*1er Sección del sitio*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh; /*Hv: Indica que ocupará al menos el 90% de la pantalla...*/
+    color: white;
+    /*al usar "linear-gradient"
+        Se añade un filtro a la imagen que mejora la legibilidad del texto que está sobre ella, más si son contrarios...
+
+        En este caso es un filtro obscuro con letras blancas
+    */
+    background-image: linear-gradient(
+        0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+    ), url(media/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; /*Asi siempre ocupara todo el espacio*/
+    background-position: center center;
+}
+#hero h1{
+     color: white; 
+     font-size: 3em;
+}
+#hero button{ font-size: 2em; /*1.75*/ }
+
+
+#somos-proya{}
+#somos-proya .container{
+    text-align: center;
+    padding: 200px 12px;
+    /*height: 85vh; / *85% de la pantallla*/
+}
+
+#nuestros-programas{
+    background-color: rgb(30, 30, 30);
+    color: white;
+    text-align: center;
+}
+#nuestros-programas .container{ 
+    padding: 85px 12px; /*150px 12px*/
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+}
+#nuestros-programas h2{ 
+    margin-top: 0px;
+    font-size: 2em;
+}
+#nuestros-programas p{ display: none; }
+#nuestros-programas .carta{
+    background-position: center center;
+    background-size: cover;
+    padding: 50px 50px;
+    margin:  30px;
+    border-radius: 15px;
+}
+
+/*[Nota]: No hay que dejar espacios en entre el ":" y palabra y palabra...*/
+.carta:first-child{ 
+    background-image: linear-gradient(
+        0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+    ), url(media/front-end.jpg);
+}
+.carta:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+    ), url(media/full-stack.jpg);
+}
+.carta:nth-child(3){
+    background-image: linear-gradient(
+        0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+    ), url(media/python.jpg);
+}
+
+#caracteristicas .container{
+    text-align: center;
+    padding: ;
+}
+#caracteristicas li{
+    margin: 16px 0px;
+    font-weight: bold;
+}
+
+#final{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(30, 30, 30);
+    color: white;
+    ...
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 80vh; /*Hv: Indica que ocupará al menos el 80% de la pantalla...*/
+}
+/*El texto en "h2", Mantendrá su tamaño hasta el 90% del ANCHO*/
+#final h2{ font-size: 9vw; }
+/*Boton igual, pero siempre más chico 50% */
+#final button{ font-size: 5vw; }
+
+#footer{
+    background-color: rgb(230, 230, 230);
+}
+#footer p{
+    margin: 0;
+    color: rgb(100, 100, 100);
+}
+#footer .container{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 
 }

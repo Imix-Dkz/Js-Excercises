@@ -47,3 +47,14 @@ Cosas como:
 * Concepto y ejemplos de Array
 * Conceptop y ejemplos de objetos
 * Combinación de Objetos con Arrays
+
+## Centrado de DIV
+Contine una lista de ejemplos de como centrar Divs de distintas formas, a lo largo de una pantalla
+* Esto viene del vídeo: [Cómo Centrar tus Elementos HTML Fácilmente
+](https://www.youtube.com/watch?v=nBCvLJjcFNk)
+#### ./Div-Center/
+
+## Centrado de encabezado
+Ejemplo de centrado de un encabezado...
+* Esto viene del video: [Cómo Hacer un Encabezado Responsive con HTML y CSS
+](https://www.youtube.com/watch?v=OuoLQiXPitk)

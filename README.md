@@ -53,8 +53,10 @@ Contine una lista de ejemplos de como centrar Divs de distintas formas, a lo lar
 * Esto viene del vídeo: [Cómo Centrar tus Elementos HTML Fácilmente
 ](https://www.youtube.com/watch?v=nBCvLJjcFNk)
 #### ./Div-Center/
+Contiene un sólo script con varios ejemplos para posicionamiento de un DIV, así como la explicación y uso de sus atrivutos para lograrlo...
 
 ## Centrado de encabezado
 Ejemplo de centrado de un encabezado...
 * Esto viene del video: [Cómo Hacer un Encabezado Responsive con HTML y CSS
 ](https://www.youtube.com/watch?v=OuoLQiXPitk)
+#### ./

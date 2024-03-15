@@ -59,4 +59,6 @@ Contiene un sólo script con varios ejemplos para posicionamiento de un DIV, as�
 Ejemplo de centrado de un encabezado...
 * Esto viene del video: [Cómo Hacer un Encabezado Responsive con HTML y CSS
 ](https://www.youtube.com/watch?v=OuoLQiXPitk)
-#### ./
+#### ./HeadResponsive/
+Contiene un index+css y Logo para un HEAD de págian web responsivo, con algunos ejemplos y consideraciones y cambios de diseño...
+Un LOGO png y consideraciones para los estilos del los enlaces y navegación del sitio

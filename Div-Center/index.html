@@ -1,11 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Div Center</title>
+    <title>Div Center y sus consideraciones...</title>
 </head>
 <style>
     body{ font-family: sans-serif; }
-    .contenedor{
+    .s1{
+        border-style: solid;
+        border-width: 1px;
+    }
+    .div-dos{
+        background-color: aqua;
+        height: 35hv;
+        margin: 2%;
+
+        display: flex;
+    }
+    .div-tres{
+        background-color:chocolate;
+        height: 35hv;
+        margin: 3%;
+
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .div-cuatro{
+        background-color:cornflowerblue;
+        height: 40hv;
+        margin: 4%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .div-cinco{
         background-color: khaki;
         height: 50vh;
         margin: 5%;
@@ -14,13 +43,64 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        text-align: center;
     }
-    p{ width: 50%; }
+    p{ width: 75%; }
 </style>
 <body>
-    <div class="contenedor">
-        <h1>centrame</h1>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam nobis eaque deserunt esse laboriosam earum sint, cupiditate dicta quam molestiae quis minima aliquid cumque adipisci! Excepturi, dolorum! Sunt, cumque nulla.
+    <section id="seccion-uno">
+        <div class="s1">
+            <h1 class="s1">DIV sin CSS</h1>
+            <p class="s1">
+                Este es un contenedor sin estilos decorativos o de orientación aplicadas, tiene un <b>H1</b> para el título y un <b>P</b> para el texto, el resto de DIVs serán iguales...<br>
+                <br>
+                Sólo tiene estilo de linea con el "s1":(border-style: solid; border-width: 1px;) para poder ser identificados, el contenido se va hacia la izquierda... El resto de distribución de espacios de los elementos se mantienen por defecto...
+            </p>
+        </div>
+    </section><section id="seccion-dos">
+        <div class="div-dos">
+            <h1 class="s1">display:flex;<br>Default</h1>
+            <p class="s1">
+                Este es un DIV, al que se le activo el atributo "Display:flex", Por defecto mantiene la orientación "ROW", lo que hace es que el resto de contenidos dentro de él, mantengan en fila, este tipo de información se puede orientar al reves, pero eso lo veremos en el proximo DIV...<br>
+                <br>                
+                El resto de atributos de este DIV son: "background-color: aqua; height: 35hv; margin: 2%;"<br>
+                <br>
+                [Nota]: Para todos los ejemplos, los parrafos:<b>(P)</b>, tienen un tamaño del 75% del espacio
+            </p>
+        </div>
+    </section><section id="seccion-tres">
+        <div class="div-tres">
+            <h1 class="s1">display:flex;<br>flex-direction:row-reverse</h1>
+            <p class="s1">
+                En este caso se mantienen los atributos generales de la clase del DIV anterior, pero se le añadio el atributo "flex-direction:row-reverse", con el cual se INVIERTE la orientación de presentación de los elementos, pero seguirá de forma <B>HORIZONTAL</B><br>
+                El contenido dentro de los mismos aún será de izquierda a derecha...<br>
+                <br>
+                El resto de atributos de este estilo son "background-color:chocolate; height: 35hv; margin: 3%;<br>
+                [Nota]: <b>"hv"</b> hace referencia al <b>"height value"</b>, tambien puede ser <b>"wv"/"width value"</b>, el valor indicado ahí es <b>PORCENTUAL</b> y en este caso  indica que el tamaño será equivalente al 35% del espacio vertical disponible<br>
+                El ""
+            </p>
+        </div>
+    </section><section id="seccion-cuatro">
+        <div class="div-cuatro">
+            <h1 class="s1">
+                display:flex;<br>
+                flex-direction:column<br>
+                justify-content: flex-end;<br>
+                align-items:center
+            </h1><p class="s1">
+                En este caso se cambia la orientación por defecto del display:flex, con "flex-direction" y ahora será en columnas , como añadido, se aplicará "justify-content:flex-end;" y "align-items: center;"...<br>
+                justify-content: puede ser usado para dar dirección a los elementos de una columna, ya sea todos al fondo con "flex-end", todos al centro con "center" o todos al inicio con "flex-start"<br>
+                <br>
+                Lo cual permitirá que el contenido dentro del DIV sea centrado, existe tambien la opción de "flex-direction:column-reverese", que provocaria un ejemplo similar al 3er DIV, pero por ahora no será usado...
+            </p>
+        </div>
+    </section><section id="seccion-cinco">
+        
+    </section>
+
+    <div class="div-cinco">
+        <h1>Centrado</h1>
+        <p> Este último añade las caracteristicas del previo, pero se le agregó ... <br>"text-align:center", con lo que aparte, a todos los elementos hijos dentro de el, se les indicará que su texto sea centrado ...<br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam nobis eaque deserunt esse laboriosam earum sint, cupiditate dicta quam molestiae quis minima aliquid cumque adipisci! Excepturi, dolorum! Sunt, cumque nulla.</p>
     </div>
     
 </body>
